@@ -4,12 +4,12 @@ public class Main {
 
         int position = 0;
         final int WINNING_POSITION = 100;
-
+       int count=0;
         while (position < WINNING_POSITION) {
             int number = (int) (Math.random() * 6) + 1; // Roll the dice
             System.out.println("Your dice is rolling...");
             System.out.println("Hey you get number " + number);
-
+            count++;
             int option = (int) (Math.random() * 3) + 1; // Choose an option
 
             switch (option) {
@@ -35,6 +35,7 @@ public class Main {
             }
 
             System.out.println("Current Position: " + position + "\n");
+            System.out.println("The Dice was rolled "+count+ " times to win the game! \n");
         }
 
         System.out.println("Congratulations! You reached the winning position: " + WINNING_POSITION);
